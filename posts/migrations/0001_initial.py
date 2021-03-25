@@ -28,6 +28,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=255, verbose_name='Заголовок')),
+                ('slug', models.SlugField()),
                 ('content', models.TextField(verbose_name='Содержимое поста')),
                 ('created_at', models.DateTimeField(editable=False)),
                 ('updated_at', models.DateTimeField()),
