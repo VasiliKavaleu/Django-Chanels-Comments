@@ -5,9 +5,10 @@
   <ol class="breadcrumb">
       <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'posts' %}">Назад к постам</a></li>
   </ol>
+</nav>
     <hr>
     <h4 class="text-center">{{ post.title }}</h4>
-    <small>опубликовано: {{ post.created_at|date:"Y-m-d" }}
+    <small>опубликовано: {{ post.created_at|date:"Y-m-d" }}</small>
     <br><br>
     <p>{{ post.content|safe }}</p>
     <hr>
