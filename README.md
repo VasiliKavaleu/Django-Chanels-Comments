@@ -16,3 +16,5 @@
 
 
 Для тех, кто хочет склонировать готовую версию проекта, - используйте команду **git clone --branch completed-project git@gitlab.com:PyCoding1/djchannels-rtc.git** (или `https://gitlab.com/PyCoding1/djchannels-rtc.git`)
+
+**ВНИМАНИЕ!** README.md файлы в ветках master и completed-project **различаются**!
