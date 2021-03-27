@@ -12,3 +12,7 @@
 5. Запустить `python manage.py migrate`
 6. Запустить `python manage.py loaddata data.json --app=posts`, чтобы предзаполнить БД
 7. Запустить `python manage.py loaddata data.json --app=comments`, чтобы предзаполнить БД
+
+
+
+Для тех, кто хочет склонировать готовую версию проекта, - используйте команду **git clone --branch completed-project git@gitlab.com:PyCoding1/djchannels-rtc.git** (или `https://gitlab.com/PyCoding1/djchannels-rtc.git`)
