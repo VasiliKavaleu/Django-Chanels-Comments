@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'posts',
     'comments',
     # 3rd-party-packages
-    'crispy_forms'
+    'crispy_forms',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,20 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djangochannels.wsgi.application'
+ASGI_APPLICATION = "djangochannels.asgi.application"
+
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('localhost', 6379)],
+        },
+    },
+}
+
+
+
 
 
 # Database

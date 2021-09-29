@@ -1,22 +1,41 @@
-Болванка проекта
-
-1. Склонировать проект - **git clone** (либо **ssh** ссылка, либо **https**)
-2. Перейти в директорию **djchannels-rtc**
-3. Установить виртуальное окружение (например через venv)
-
-Например: `python3 -m venv myenv`
-
-И активировать: _Windows_ (**myenv\Scripts\activate**), _unix_ (**source myenv/bin/activate**)
-
-4. Установить зависимости - `pip install -r requirements.txt`
-5. Запустить `python manage.py migrate`
-6. Запустить `python manage.py loaddata data.json --app=posts`, чтобы предзаполнить БД
-7. Запустить `python manage.py loaddata data.json --app=comments`, чтобы предзаполнить БД
+## Example of using Django Channels for creating comments
 
 
+Clone project 
 
-Для тех, кто хочет склонировать готовую версию проекта, - используйте команду **git clone --branch completed-project git@gitlab.com:PyCoding1/djchannels-rtc.git** (или `https://gitlab.com/PyCoding1/djchannels-rtc.git`)
+Create virtual environment
+```bash
+python3 -m venv env
+```
 
-**ВНИМАНИЕ!** README.md файл в ветках _master_ и _completed-project_ **различаются**!
+Activate virtual environment
+```bash
+source env/bin/activate
+```
 
-Логин и пароль от админки - **admin/devpass**
+Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+Make migrations/migrate
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Load data into db
+```bash
+python manage.py loaddata data.json --app=posts
+python manage.py loaddata data.json --app=comments
+```
+
+Run Redis in container
+```bash
+docker-compose -f docker-compose.redis.yml up
+```
+
+Run server and leave comment under post (login is required)
+```bash
+python3 manage.py runserver
+```
